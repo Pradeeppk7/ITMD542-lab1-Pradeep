@@ -4,6 +4,21 @@
     border-bottom: 2px solid #f0f0f0;
 }
 
+/* Space Middle Class - For Centered Content */
+.spacemiddle {
+    margin: 40px auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.spacemiddle .col-lg-4 {
+    margin: 0 20px;
+}
+
 .navbar-brand {
     font-weight: 600;
     font-size: 1.3rem;
@@ -41,7 +56,7 @@
 .carousel {
     width: 100%;
     max-width: 100%;
-    height: 60vh;
+    height: 80vh;
 }
 
 .carousel-inner {
@@ -122,6 +137,79 @@ img {
     display: block;
 }
 
+/* Mobile Responsive - Carousel */
+@media (max-width: 1024px) {
+    .carousel {
+        height: 70vh;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 50vh;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-indicators {
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .carousel-indicators button {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 40vh;
+    }
+    
+    .carousel-control-prev {
+        left: 5px;
+    }
+    
+    .carousel-control-next {
+        right: 5px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px;
+        gap: 6px;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 /* About Section Styling */
 .about-section {
     padding: 80px 0;
@@ -142,6 +230,84 @@ img {
     line-height: 1.8;
     margin-bottom: 20px;
     text-align: justify;
+}
+
+.about-text .highlight {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive - About Section */
+@media (max-width: 992px) {
+    .about-section .row {
+        display: block;
+    }
+    
+    .about-section .col-lg-6 {
+        width: 100% !important;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 50px 20px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .about-image {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+    
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+    
+    .about-image {
+        margin-top: 20px;
+    }
 }
 
 .about-text .highlight {
