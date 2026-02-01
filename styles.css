@@ -12,43 +12,80 @@ html, body {
 
 /* Navbar Styling */
 .navbar {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     border-bottom: 2px solid #f0f0f0;
 }
 
-/* Space Middle Class - For Centered Content */
-.spacemiddle {
-    margin: 40px auto;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
+.navbar .container-fluid {
+    gap: 0;
     align-items: center;
-    width: 100%;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-.spacemiddle .col-lg-4 {
-    margin: 0 10px;
-    flex: 0 1 calc(33.333% - 20px);
 }
 
 .navbar-brand {
     font-weight: 600;
     font-size: 1.3rem;
     color: #2c3e50 !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: auto;
 }
 
 .brand-text {
     color: #2c3e50;
     font-weight: 700;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.brand-text-content {
+    color: #2c3e50;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .logo-img {
-    height: 35px;
+    height: 40px;
     width: auto;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    
+    .logo-img {
+        height: 35px;
+    }
+    
+    .brand-text-content {
+        font-size: 0 !important;
+        display: inline-block !important;
+    }
+    
+    .brand-text-content::before {
+        content: "PMC" !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        color: #2c3e50 !important;
+        letter-spacing: 0.5px !important;
+    }
 }
 
 .navbar-nav .nav-link {
